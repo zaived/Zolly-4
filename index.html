@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Matt Zolly</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css-rob/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link rel="stylesheet" href="css-rob/main.css" type="text/css" media="all" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+
+<head>
+
+
+
+
+<style id="jsbin-css">
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #fff;
+}
+
+
+
+strong {
+  font-weight: 700;
+  color: #f961af;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+}
+.container .wrapper {
+  width: 100%;
+  height: 80%;
+  display: inline-block;
+  position: relative;
+  -moz-perspective: 900px;
+  -webkit-perspective: 900px;
+  perspective: 900px;
+}
+.container .wrapper section {
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -moz-transform-origin: 50% 100% 0;
+  -webkit-transform-origin: 50% 100% 0;
+  transform-origin: 50% 100% 0;
+  -moz-transform: rotateX(83deg);
+  -ms-transform: rotateX(83deg);
+  -webkit-transform: rotateX(83deg);
+  transform: rotateX(83deg);
+  font-size: 1em;
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  text-align: center;
+}
+.container .wrapper section .transform {
+  margin: 0;
+  padding-top: 3em;
+  display: inline-block;
+  position: relative;
+  width: 80%;
+  min-height: 26em;
+  background: transparent;
+}
+.container .wrapper section .transform header {
+  position: relative;
+}
+.container .wrapper input[name="pure-nav"]:checked + section {
+  -moz-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  z-index: 6;
+  opacity: 1;
+}
+
+
+input[name="switch"],
+input[name="pure-nav"] {
+  display: none;
+}
+
+.navigation {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+}
+.navigation .start {
+  cursor: pointer;
+  order: -2;
+  -moz-order: -2;
+  -webkit-order: -2;
+  padding: 1.95em 1.2em;
+}
+@media (max-width: 570px) {
+  .navigation .start {
+    position: absolute;
+    z-index: 10;
+    right: 3.4em;
+    top: 0;
+  }
+}
+.navigation .start:focus .icon {
+  color: #fff;
+}
+.navigation nav {
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -moz-perspective: 900px;
+  -webkit-perspective: 900px;
+  perspective: 900px;
+}
+.navigation nav .switch {
+  order: -1;
+  -moz-order: -1;
+  -webkit-order: -1;
+}
+.navigation nav .switch h1 {
+  padding: 1.95em 1.2em 1.95em 0;
+  display: inline-block;
+  text-align: left;
+}
+.navigation nav ul {
+  flex-grow: 2;
+  -webkit-flex-grow: 2;
+  text-align: right;
+  display: block;
+}
+.navigation nav ul li {
+  display: inline-block;
+}
+.navigation nav ul li label {
+  cursor: pointer;
+  color: #fff;
+  display: inline-block;
+  padding: 1.9em 1em;
+  position: relative;
+}
+.navigation nav ul li label .icon {
+  color: #f961af;
+  display: inline-block;
+  margin: -0.2em 0.6em 0 0;
+}
+.navigation nav ul li:focus {
+  outline: 0;
+  background-color: transparent;
+}
+.navigation nav ul li:focus label {
+  color: #f961af;
+}
+.navigation nav ul li:focus label .icon {
+  color: #fff;
+}
+@media (max-width: 570px) {
+  .navigation nav .switch {
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    display: block;
+    width: 100%;
+    z-index: 1;
+  }
+  .navigation nav .switch h1 {
+    display: block;
+    position: relative;
+    z-index: 1;
+    padding: 1.95em 1.2em;
+    background: #f5f5f5;
+  }
+  .navigation nav .switch h1:after {
+    font-family: 'FontAwesome', sans-serif;
+    content: "\f0c9";
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -moz-transform-origin: 50% 50% 0;
+    -webkit-transform-origin: 50% 50% 0;
+    transform-origin: 50% 50% 0;
+    -moz-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -webkit-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+    position: absolute;
+    right: 1.2em;
+    top: 1.95em;
+  }
+  .navigation nav ul {
+    text-align: center;
+    position: absolute;
+    z-index: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    left: 0;
+    top: -4.75em;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -moz-transform-origin: 100% 50% 0;
+    -webkit-transform-origin: 100% 50% 0;
+    transform-origin: 100% 50% 0;
+    -moz-transform: translateY(200%);
+    -ms-transform: translateY(200%);
+    -webkit-transform: translateY(200%);
+    transform: translateY(200%);
+  }
+  .navigation nav ul li .icon {
+    display: block;
+  }
+  .navigation nav input[name="switch"]:checked ~ label h1:after {
+    color: #f961af;
+    -moz-transform: rotateZ(180deg);
+    -ms-transform: rotateZ(180deg);
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+  }
+ 
+}
+html, body {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.focused {
+  color: #f961af;
+  border: #f961af solid 3px;
+}
+
+
+
+
+
+
+.ease {
+  width: 0px;
+  height: 74px;
+  background-color: #f961af;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -o-transition: .3s ease;
+  -ms-transition: .3s ease;
+  transition: .3s ease;
+}
+
+
+
+
+</style>
+
+<body>
+
+    
+  <div class="h-container">
+    <ul>
+      <h1>ZOLLY</h1>
+      <li><a href="#">Directed </a></li>
+      <li><a href="#">Creative Producer</a></li>
+    </ul>
+  </div>
+    
+<script src="js-rob/main.js" type="text/javascript"></script>
+
+<div class="container">
+    <div class="row">
+    <div class="example" id="gall">
+    <img src="image/compressed/88-Rising---Head-In-The-Clouds-Visual-Album.png"><a href="#"><span>88-Rising Head in The Clouds</span></a>
+    <img src="image/compressed/_Feen_---luh-kel-and-trippie-redd.png"><a href="/videos/88.html"><span>Trippie Redd x Luh Kel "Feen"</span></a>
+    <img src="image/compressed/adidas-run-for-the-oceans.png"><a href="/videos/89.html"><span>Adidas "Run for the Ocean"</span></a>
+    <img src="image/compressed final/pleasures-x-adidas.png"><a href="https://snow-beach.com/video/adidas-hypebeast-pleasures/#video"><span>Addidas x Pleasures</span></a>
+    <img src="image/compressed/cold-war-kids-.png"><a href="/videos/90.html"><span>Cold War Kids</span></a>
+    <img src="image/compressed/Cove-water.png"><a href="https://snow-beach.com/video/cove-water/#video"><span>Cove Water</span></a>
+    <img src="image/compressed/essential.png"><a href="/videos/91.html"><span>Essential</span></a>
+    <img src="image/compressed/gucci-pajamas-chance-guap-charlie-wilson--.png"><a href="/videos/92.html"><span>Guap Dad 4000 x Chance the Rapper "gucci pajamas"</span></a>
+    <img src="image/compressed final/happy-socks-hoffs-day-off.png"><a href="/videos/93.html"><span>Happy Socks - David Hasselhoff</span></a>
+    <img src="image/compressed/Juice-Wrld-Black-and-White.png"><a href="/videos/94.html"><span>Juice Wrld "Black and White"</span></a>
+    <img src="image/compressed/juicy-j-and-travis-no-english-.png"><a href="/videos/95.html"><span>Juicy J x Travis Scott "No English"</span></a>
+    <img src="image//compressed final/kajabi---what-will-you-create-.png"><a href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/e5649a15-4cd4-4bcd-ab33-bfc94fe6656d"><span>Kajabi - Mary</span></a>
+    <img src="image/compressed/Kajabi---Amir.png"><a href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/d80288a1-58e4-4a16-8818-def1ecce2c51"><span>Kajabi - Amir</span></a>
+    <img src="image/compressed/oliver-tree---alien-boy-_-all-that.png"><a href="/videos/97.html"><span>Oliver Tree - Alien Boy</span></a>
+    <img src="image/compressed/Oliver-Tree-_Hurt_.png"><a href="/videos/96.html"><span>Oliver Tree - Hurt</span></a>
+    <img src="image/compressed/Reebok---Go-Bold-2.png"><a href="/videos/98.html"><span>Reebok "Go Bold 2"</span></a>
+    <img src="image/compressed final/Reebok-Go-Bold.png"><a href="/videos/99.html"><span>Reebok "Go Bold"</span></a>
+    <img src="image/compressed/Reebok-Winter.png"><a href="/videos/100.html"><span>Reebok Winter</span></a>
+    <img src="image/compressed/Rosalia.png"><a href="/videos/101.html"><span>Rosalia</span></a>
+    <img src="image/compressed/scammin-guapdad4000-mozzy.png"><a href="/videos/102.html"><span>Guapdad 4000 x Mozzy "Scammin"</span></a>
+    <img src="image/compressed/Someway-The-Weeknd-and-Nav.png"><a href="/videos/103.html"><span>The Weekend x Nav "Someway"</span></a>
+    <img src="image/compressed/The-Hundreds---Summer.png"><a href="https://snow-beach.com/video/the-hundreds/#video"><span>The Hundreds "Summer"</span></a>
+    <img src="image/compressed/Travis-Scott-and-Juicy-J-_Neighbors_.png"><a href="/videos/104.html"><span>Travis Scott x Juicy J "Neighbors"</span></a>
+    <img src="image/compressed/Travis-Scott-and-Nav-_Biebs-In-The-Trap_.png"><a href="/videos/105.html"><span>Travis Scott x NAV "Beibs in the Trap"</span></a>
+    <img src="image/compressed final/adidas-run-for-the-oceans-.png"><a href="https://snow-beach.com/video/adidas-run-for-the-oceans/#video" target="_blank"><span>Adidas "Run For The Oceans"</span></a>
+    <img src="/image/compressed final/Brewer's-Association.png"><a href="#"><span>Brewer's Association</span></a>
+    <img src="image/compressed final/Equinox---Impossible-Happens---Meet-Carrinicole.png"><a target="_blank" href="https://snow-beach.com/video/equinox-personal-training-meet-carrinicole/#video"><span>Equinox "Impossible Happens"</span></a>
+    <img src="image/compressed final/GoldLink-Crew.png"><a target="_blank" href="https://snow-beach.com/video/goldlink-crew/#video"><span>GoldLink "Crew"</span></a>
+    <img src="image/compressed final/J.png"><a href="https://snow-beach.com/video/j-balvin-reggaeton/#video"><span>J Balvin "REGGAETON"</span></a>
+    <img src="image/compressed final/kajabi-chris-downing.png"><a target="_blank" href="https://app.frame.io/reviews/67543b9b-6b9b-4379-93db-86ea2ebea316/b699cbc3-3814-46b2-ad59-f88399e27251"><span>KAJABI: Chris Downing</span></a>
+    <img src="image/compressed final/Kajabi;-francoise-weeks-.png"><a target="_blank" href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/b1559bbe-ccaf-4a50-a129-1fc19a164ce0"><span>KAJABI: Francoise Weeks</span></a>
+    <img src="image/compressed final/lil-yachty-minnesota.png"><a href="/videos/106.html"><span>Lil Yachty x Quavo "Minnesota"</span></a>
+    <img src="image/compressed final/Mercedes---Almost-Gets-You-Nowhere.png"><a href="/videos/107.html"><span>Mercedes "Almost"</span></a>
+    <img src="image/compressed final/Tokyos-Revenge.png"><a href="/videos/109.html"><span>TOKYO'S REVENGE "GOODMORNINGTOKYO"</span></a>
+    <img src="image/compressed final/Puma---Nipsey-Hussle---_My-Commute_.png"><a href="videos/108.html"><span>PUMA x HIGHSNOBIETY x NIPSEY HUSSLE "My Commute"</span></a>
+</div>
+</div>
+</div>
+
+<div class="m-container">
+   <div class="m-header">
+     <ul>
+       <li><h1>Zolly</h1></li>
+       <li><a href="#">Directed</a></li>
+       <li><a href="#">Creative Producer</a></li>
+     </ul>
+   </div>
+    <img src="image/compressed/88-Rising---Head-In-The-Clouds-Visual-Album.png"><a href="#"><span>88-Rising Head in The Clouds</span></a>
+    <img src="image/compressed/_Feen_---luh-kel-and-trippie-redd.png"><a href="/videos/88.html"><span>Trippie Redd x Luh Kel "Feen"</span></a>
+    <img src="image/compressed/adidas-run-for-the-oceans.png"><a href="/videos/89.html"><span>Adidas "Run for the Ocean"</span></a>
+    <img src="image/compressed/adidas-x-pleasures.png"><a href="https://snow-beach.com/video/adidas-hypebeast-pleasures/#video"><span>Addidas x Pleasures</span></a>
+    <img src="image/compressed/cold-war-kids-.png"><a href="/videos/90.html"><span>Cold War Kids</span></a>
+    <img src="image/compressed/Cove-water.png"><a href="https://snow-beach.com/video/cove-water/#video"><span>Cove Water</span></a>
+    <img src="image/compressed/essential.png"><a href="/videos/91.html"><span>Essential</span></a>
+    <img src="image/compressed/gucci-pajamas-chance-guap-charlie-wilson--.png"><a href="/videos/92.html"><span>Guap Dad 4000 x Chance the Rapper "gucci pajamas"</span></a>
+    <img src="image/compressed/Happy-Socks-with-David-Hasselhoff.png"><a href="/videos/93.html"><span>Happy Socks - David Hasselhoff</span></a>
+    <img src="image/compressed/Juice-Wrld-Black-and-White.png"><a href="/videos/94.html"><span>Juice Wrld "Black and White"</span></a>
+    <img src="image/compressed/juicy-j-and-travis-no-english-.png"><a href="/videos/95.html"><span>Juicy J x Travis Scott "No English"</span></a>
+    <img src="image/compressed/Kajabi---5-Marys-.png"><a href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/e5649a15-4cd4-4bcd-ab33-bfc94fe6656d"><span>Kajabi - Mary</span></a>
+    <img src="image/compressed/Kajabi---Amir.png"><a href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/d80288a1-58e4-4a16-8818-def1ecce2c51"><span>Kajabi - Amir</span></a>
+    <img src="image/compressed/oliver-tree---alien-boy-_-all-that.png"><a href="/videos/97.html"><span>Oliver Tree - Alien Boy</span></a>
+    <img src="image/compressed/Oliver-Tree-_Hurt_.png"><a href="/videos/96.html"><span>Oliver Tree - Hurt</span></a>
+    <img src="image/compressed/Reebok---Go-Bold-2.png"><a href="/videos/98.html"><span>Reebok "Go Bold 2"</span></a>
+    <img src="image/compressed/Reebok---Go-Bold.png"><a href="/videos/99.html"><span>Reebok "Go Bold"</span></a>
+    <img src="image/compressed/Reebok-Winter.png"><a href="/videos/100.html"><span>Reebok Winter</span></a>
+    <img src="image/compressed/Rosalia.png"><a href="/videos/101.html"><span>Rosalia</span></a>
+    <img src="image/compressed/scammin-guapdad4000-mozzy.png"><a href="/videos/102.html"><span>Guapdad 4000 x Mozzy "Scammin"</span></a>
+    <img src="image/compressed/Someway-The-Weeknd-and-Nav.png"><a href="/videos/103.html"><span>The Weekend x Nav "Someway"</span></a>
+    <img src="image/compressed/The-Hundreds---Summer.png"><a href="https://snow-beach.com/video/the-hundreds/#video"><span>The Hundreds "Summer"</span></a>
+    <img src="image/compressed/Travis-Scott-and-Juicy-J-_Neighbors_.png"><a href="/videos/104.html"><span>Travis Scott x Juicy J "Neighbors"</span></a>
+    <img src="image/compressed/Travis-Scott-and-Nav-_Biebs-In-The-Trap_.png"><a href="/videos/105.html"><span>Travis Scott x NAV "Beibs in the Trap"</span></a>
+    <img src="image/compressed final/adidas-run-for-the-oceans-.png"><a href="https://snow-beach.com/video/adidas-run-for-the-oceans/#video" target="_blank"><span>Adidas "Run For The Oceans"</span></a>
+    <img src="/image/compressed final/Brewer's-Association.png"><a href="#"><span>Brewer's Association</span></a>
+    <img src="image/compressed final/Equinox---Impossible-Happens---Meet-Carrinicole.png"><a target="_blank" href="https://snow-beach.com/video/equinox-personal-training-meet-carrinicole/#video"><span>Equinox "Impossible Happens"</span></a>
+    <img src="image/compressed final/GoldLink-Crew.png"><a target="_blank" href="https://snow-beach.com/video/goldlink-crew/#video"><span>GoldLink "Crew"</span></a>
+    <img src="image/compressed final/J.png"><a href="https://snow-beach.com/video/j-balvin-reggaeton/#video"><span>J Balvin "REGGAETON"</span></a>
+    <img src="image/compressed final/kajabi-chris-downing.png"><a target="_blank" href="https://app.frame.io/reviews/67543b9b-6b9b-4379-93db-86ea2ebea316/b699cbc3-3814-46b2-ad59-f88399e27251"><span>KAJABI: Chris Downing</span></a>
+    <img src="image/compressed final/Kajabi;-francoise-weeks-.png"><a target="_blank" href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/b1559bbe-ccaf-4a50-a129-1fc19a164ce0"><span>KAJABI: Francoise Weeks</span></a>
+    <img src="image/compressed final/lil-yachty-minnesota.png"><a href="/videos/106.html"><span>Lil Yachty x Quavo "Minnesota"</span></a>
+    <img src="image/compressed final/Mercedes---Almost-Gets-You-Nowhere.png"><a href="/videos/107.html"><span>Mercedes "Almost"</span></a>
+    <img src="image/compressed final/Tokyos-Revenge.png"><a href="/videos/109.html"><span>TOKYO'S REVENGE "GOODMORNINGTOKYO"</span></a>
+    <img src="image/compressed final/Puma---Nipsey-Hussle---_My-Commute_.png"><a href="videos/108.html"><span>PUMA x HIGHSNOBIETY x NIPSEY HUSSLE "My Commute"</span></a>
+    <div class="f-container">
+      <a href="https://www.instagram.com/zollywood_usa/">INSTAGRAM</a>
+    </div>
+</div>
+
+<script src="js-rob/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js-rob/bootstrap.min.js"></script>
+
+    </body>
+</html>
