@@ -122,6 +122,10 @@ body {
     list-style: none;
   }
 
+  .m-container span {
+    font-family: sans-serif !important;
+  }
+
   .m-container a {
     text-decoration: none;
     color: #000;
