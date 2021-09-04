@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "Presta W05 Extended Italic";
+  src: url("31ff24aa-cd7a-42ee-a6c5-11afcd2d8f05.woff2") format("woff2"),
+    url("8eeb641d-b424-4d54-99cb-1dc472e6c763.woff") format("woff");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Presta W05 Extended Italic", sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 800px) {
+  .iframe-container iframe {
+    top: 60%;
+  }
+}
