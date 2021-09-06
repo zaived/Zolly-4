@@ -78,6 +78,7 @@ body {
 .h-container h1 {
   color: #000;
   z-index: 999 !important;
+  cursor: pointer;
 }
 
 .h-container ul {
