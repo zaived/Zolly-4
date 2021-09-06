@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Presta W05 Extended Italic";
+  src: url("31ff24aa-cd7a-42ee-a6c5-11afcd2d8f05.woff2") format("woff2"),
+    url("8eeb641d-b424-4d54-99cb-1dc472e6c763.woff") format("woff");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Presta W05 Extended Italic", sans-serif;
+}
+
+.c-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.c-container p {
+  text-align: center;
+  margin-top: 10%;
+  line-height: 2rem;
+}
+
+.c-container p span {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+@media (max-width: 800px) {
+  .c-container p {
+    padding: 20px 20px;
+    margin-top: 15%;
+    font-size: 10px;
+    line-height: 1rem;
+  }
+}
