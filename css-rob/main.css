@@ -37,6 +37,7 @@ body {
   height: 95%;
   background: transparent;
   overflow: hidden;
+  z-index: 998;
 }
 .example img {
   width: 600px;
@@ -48,7 +49,6 @@ body {
 }
 .example span {
   font-family: sans-serif !important;
-  background-color: #fff;
   position: absolute;
   color: #000;
   left: 0;
