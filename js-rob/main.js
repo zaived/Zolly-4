@@ -159,3 +159,32 @@ window.onload = function () {
   g_resize();
   pgal.init();
 };
+
+const cpActiveElements = document.getElementsByClassName("cp-active");
+const dActiveElements = document.getElementsByClassName("d-active");
+
+const filter = (className) => {
+  switch(className) {
+    case "d-active": {
+      for (let e of cpActiveElements)
+        e.style.display = "none";
+      for (let e of dActiveElements)
+        e.style.display = "block";
+      break;
+    }
+    case "cp-active": {
+      for (let e of dActiveElements)
+        e.style.display = "none";
+      for (let e of cpActiveElements)
+        e.style.display = "block";
+      break;
+    }
+    default: {
+      for (let e of dActiveElements)
+        e.style.display = "block";
+      for (let e of cpActiveElements)
+        e.style.display = "block";
+    }
+  }
+}
+
