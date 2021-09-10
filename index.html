@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="icon" type="image/png" href="/image/fav.png">
 
     <title>Matt Zolly</title>
 
@@ -25,6 +26,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 
@@ -244,6 +246,9 @@ html, body {
 
 <body>
 
+  <div class="loader">
+    <div></div>
+  </div>
     
   <div class="h-container">
     <ul>
@@ -303,7 +308,7 @@ html, body {
 
 <div class="m-container">
   <header class="m-header">
-    <h1>ZOLLY</h1>
+    <h1 onClick="filter()">ZOLLY</h1>
   </header>
    <div class="m-header">
      <ul>
@@ -343,7 +348,7 @@ html, body {
 <img class="cp-active" src="image/compressed final/Tokyos-Revenge.png"><a href="/videos/109.html"><span class="cp-active">Tokyo's Revenge: Goodmorning Tokyo</span></a>
 <img class="cp-active" src="image/compressed/juicy-j-and-travis-no-english-.png"><a href="/videos/95.html"><span class="cp-active">Travis Scott x Juicy J: No English</span></a>
 <img  class="cp-active" src="image/compressed/88-Rising---Head-In-The-Clouds-Visual-Album.png"><a href="#"><span class="cp-active">88 Rising : Head In The Clouds (Visual Album)</span></a>
-<!-- C. Tangana x Natti Natasha: “Viene y Va”-->
+<img  class="cp-active" src="image/compressed final/C.png"><a href="/videos/110.html"><span class="cp-active">C. Tangana, Natti Natasha : Viene y Va </span></a>
 <img class="cp-active" src="image/compressed final/Equinox---Impossible-Happens---Meet-Carrinicole.png"><a target="_blank" href="https://snow-beach.com/video/equinox-personal-training-meet-carrinicole/#video"><span class="cp-active">Equinox</span></a>
  <img class="cp-active" src="image/compressed/essential.png"><a href="/videos/91.html"><span class="cp-active">Essential</span></a>
  <img class="cp-active" src="image/compressed/Juice-Wrld-Black-and-White.png"><a href="/videos/94.html"><span class="cp-active">Juice Wrld: Black and White</span></a>
@@ -357,6 +362,11 @@ html, body {
 
 <script src="/js-rob/filter.js"></script>
 <script src="js-rob/jquery.js"></script>
+<script>
+  $(window).on('load',function(){
+    $(".loader").fadeOut(5000);
+  });
+</script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js-rob/bootstrap.min.js"></script>

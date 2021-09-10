@@ -99,17 +99,27 @@ body {
 .h-container ul li {
   padding: 10px 0px;
   list-style: none;
-  z-index: 999 !important;
+  z-index: 998 !important;
   color: #000;
 }
 
 .h-container ul li a {
   color: #000;
   text-decoration: none;
+  z-index: 998 !important;
 }
 
 .m-container {
   display: none;
+}
+
+.loader{
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  position: absolute;
+  z-index: 999 !important;
 }
 
 @media (max-width: 800px) {
