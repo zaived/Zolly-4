@@ -175,7 +175,19 @@ i{
   z-index: 999 !important;
 }
 
+.loader img {
+  margin-top: 100px;
+  width: 700px;
+  text-align: center;
+  z-index: 999 !important;
+}
+
 @media (max-width: 800px) {
+
+  .loader img {
+    display: none;
+  }
+
   .h-container {
     display: none;
   }
