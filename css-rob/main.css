@@ -61,7 +61,6 @@ body {
 .example img {
   width: 600px;
   position: absolute;
-  background: #666;
   overflow: hidden;
   cursor: pointer;
   left: 100%;
