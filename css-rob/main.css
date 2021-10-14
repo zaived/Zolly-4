@@ -183,6 +183,10 @@ i{
 
 @media (max-width: 800px) {
 
+  .example {
+    display: none;
+  }
+
   .loader img {
     display: none;
   }
