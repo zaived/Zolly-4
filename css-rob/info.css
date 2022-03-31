@@ -4,15 +4,29 @@
     url("8eeb641d-b424-4d54-99cb-1dc472e6c763.woff") format("woff");
 }
 
+@font-face {
+  font-family: 'prestathin';
+  src: url('presta-thin-webfont.woff2') format('woff2'),
+       url('presta-thin-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 * {
   padding: 0;
   margin: 0;
 }
 
 body {
-  font-family: "Presta W05 Extended Italic", sans-serif;
+  font-family: 'prestathin', sans-serif;
 }
 
+.exit-btn {
+  color: black;
+  text-decoration: none;
+  font-family: "Presta W05 Extended Italic", sans-serif;
+}
 .c-container {
   display: flex;
   justify-content: center;
@@ -23,23 +37,72 @@ body {
 .c-container p {
   text-align: center;
   margin-top: 10%;
-  line-height: 2rem;
+  line-height: 3rem;
+  font-size: 40px;
 }
 
-.c-container p span {
+.c-container p span a {
   color: red;
-}
-
-a {
   text-decoration: none;
-  color: #000;
+}
+.m-container {
+  display: none;
 }
 
 @media (max-width: 800px) {
-  .c-container p {
-    padding: 20px 20px;
-    margin-top: 15%;
-    font-size: 10px;
-    line-height: 1rem;
+  .c-container {
+    display: none;
   }
+
+  .m-container {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .m-header h1{
+    text-align: center;
+    z-index: 999 !important;
+    font-family: "Presta W05 Extended Italic";
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .m-container ul {
+    z-index: 999 !important;
+    list-style: none;
+    margin-top: 10%;
+    padding: 0px 0px !important;
+  }
+
+  .m-container a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .m-container ul li {
+    font-family: "Presta W05 Extended Italic";
+    display: inline-block;
+    font-size: 7px;
+    padding: 0px 7px;
+  }
+
+  .m-container p span a {
+    color: red;
+    text-decoration: none;
+  }
+
+ .m-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .m-container p {
+   margin-top: 10%;
+   text-align: center;
+   font-size: 30px;
+   padding: 0px 10px;
+ }
 }

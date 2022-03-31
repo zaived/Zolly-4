@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" href="/image/fav.png">
+
+    <title>Matt Zolly</title>
+
+    <!-- Bootstrap Core CSS -->
+    <!-- <link href="css-rob/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- Custom CSS -->
+    
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link rel="stylesheet" href="/css-rob/main.css" type="text/css" media="all" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://kit.fontawesome.com/3844e59abb.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+
+<head>
+
+
+
+
+<style id="jsbin-css">
+
+body {
+  text-align: center;
+  font-family: "Presta W05 Extended Italic", sans-serif;
+  color: #fff;
+}
+
+
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+}
+.container .wrapper {
+  width: 100%;
+  height: 80%;
+  display: inline-block;
+  position: relative;
+  -moz-perspective: 900px;
+  -webkit-perspective: 900px;
+  perspective: 900px;
+}
+.container .wrapper section {
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -moz-transform-origin: 50% 100% 0;
+  -webkit-transform-origin: 50% 100% 0;
+  transform-origin: 50% 100% 0;
+  -moz-transform: rotateX(83deg);
+  -ms-transform: rotateX(83deg);
+  -webkit-transform: rotateX(83deg);
+  transform: rotateX(83deg);
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  text-align: center;
+}
+.container .wrapper section .transform {
+  margin: 0;
+  padding-top: 3em;
+  display: inline-block;
+  position: relative;
+  width: 80%;
+  min-height: 26em;
+  background: transparent;
+}
+.container .wrapper section .transform header {
+  position: relative;
+}
+.container .wrapper input[name="pure-nav"]:checked + section {
+  -moz-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  z-index: 6;
+  opacity: 1;
+}
+
+
+input[name="switch"],
+input[name="pure-nav"] {
+  display: none;
+}
+
+.navigation {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+}
+.navigation .start {
+  cursor: pointer;
+  order: -2;
+  -moz-order: -2;
+  -webkit-order: -2;
+  padding: 1.95em 1.2em;
+}
+@media (max-width: 570px) {
+  .navigation .start {
+    position: absolute;
+    z-index: 10;
+    right: 3.4em;
+    top: 0;
+  }
+}
+.navigation .start:focus .icon {
+  color: #fff;
+}
+.navigation nav {
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -moz-perspective: 900px;
+  -webkit-perspective: 900px;
+  perspective: 900px;
+}
+.navigation nav .switch {
+  order: -1;
+  -moz-order: -1;
+  -webkit-order: -1;
+}
+.navigation nav .switch h1 {
+  padding: 1.95em 1.2em 1.95em 0;
+  display: inline-block;
+  text-align: left;
+}
+.navigation nav ul {
+  flex-grow: 2;
+  -webkit-flex-grow: 2;
+  text-align: right;
+  display: block;
+}
+.navigation nav ul li {
+  display: inline-block;
+}
+.navigation nav ul li label {
+  cursor: pointer;
+  color: #fff;
+  display: inline-block;
+  padding: 1.9em 1em;
+  position: relative;
+}
+.navigation nav ul li label .icon {
+  color: #f961af;
+  display: inline-block;
+  margin: -0.2em 0.6em 0 0;
+}
+.navigation nav ul li:focus {
+  outline: 0;
+  background-color: transparent;
+}
+.navigation nav ul li:focus label {
+  color: #f961af;
+}
+.navigation nav ul li:focus label .icon {
+  color: #fff;
+}
+
+html, body {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.focused {
+  color: #f961af;
+  border: #f961af solid 3px;
+}
+
+
+
+
+
+
+.ease {
+  width: 0px;
+  height: 74px;
+  background-color: #f961af;
+  -webkit-transition: .3s ease;
+  -moz-transition: .3s ease;
+  -o-transition: .3s ease;
+  -ms-transition: .3s ease;
+  transition: .3s ease;
+}
+
+
+
+
+</style>
+
+<body>
+
+  <div class="loader">
+    <div></div>
+  </div>
+    
+<script src="/js-rob/main.js" type="text/javascript"></script>
+    <div class="row">
+    <div class="example" id="gall">
+      <div class="container">
+        <div class="h-container">
+          <ul>
+            <li class="left"><a href="/index.html">Zolly</a></li>
+              <li class="right"><a href="/contact/">Contact</a></li>
+              <li class="n-left" ><a  href="index.html">Director</a></li>
+              <li class="n-right" ><a  href="/creativeproducer/">Creative Producer</a></li>
+            </ul>
+      
+        </div>
+        <img class="d-active" src="/image/compressed final/Kajabi;-francoise-weeks-.png"><a target="_blank" href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/b1559bbe-ccaf-4a50-a129-1fc19a164ce0"><span class="d-active"  >Kajabi: What Will You Create?</span></a>
+      <img class="d-active"  src="/image/compressed/gucci-pajamas-chance-guap-charlie-wilson--.png"><a href="/videos/92.html"><span class="d-active" >GuapDad4000 x Chance the Rapper x Charlie Wilson: Gucci Pajamas</span></a>
+      <img class="d-active" src="/image//compressed final/kajabi---what-will-you-create-.png"><a href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/e5649a15-4cd4-4bcd-ab33-bfc94fe6656d"><span class="d-active">5 Mary's Ranch</span></a>
+      <img class="d-active"  src="/image/compressed/scammin-guapdad4000-mozzy.png"><a href="/videos/102.html"><span class="d-active" >Guapdad4000 x Mozzy: Scammin</span></a>
+      <img class="d-active" src="/image/compressed/Kajabi---Amir.png"><a href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/d80288a1-58e4-4a16-8818-def1ecce2c51"><span class="d-active">Amir Madison</span></a>
+      <img  class="d-active" src="/image/luhkel.png"><a href="/videos/88.html"><span class="d-active" >Luh Kel x Trippie Redd: Feen</span></a>
+      <img class="d-active" src="/image/compressed final/kajabi-chris-downing.png"><a target="_blank" href="https://app.frame.io/reviews/67543b9b-6b9b-4379-93db-86ea2ebea316/b699cbc3-3814-46b2-ad59-f88399e27251"><span class="d-active" >Chris Downing Fitness</span></a>
+      <img class="d-active"  src="/image/IDK-2.png"><a href="/videos/111.html"><span class="d-active" >IDK: LILLY</span></a>
+      <img class="d-active" src="/image/DEAN.png"><a target="_blank" href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/8f51a06a-792c-4b3a-86c0-ce88200758c4"><span class="d-active"  >Kajabi: Francoise Weeks</span></a>
+</div>
+</div>
+</div>
+
+
+<script src="/js-rob/jquery.js"></script>
+<script>
+  $(window).on('load',function(){
+    $(".loader").fadeOut(5000);
+  });
+</script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js-rob/bootstrap.min.js"></script>
+
+    </body>
+</html>

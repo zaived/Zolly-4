@@ -13,6 +13,16 @@
 
 }
 
+
+@font-face {
+  font-family: 'prestamedium';
+  src: url('presta-medium-webfont.woff2') format('woff2'),
+       url('presta-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 body {
   background: #fff;
   margin: 0;
@@ -43,7 +53,7 @@ body {
   left: 0%;
   top: 0%;
   width: 100%;
-  height: 95%;
+  height: 100vh;
   background: transparent;
   overflow: hidden;
   z-index: 998;
@@ -51,26 +61,25 @@ body {
 .example img {
   width: 600px;
   position: absolute;
-  background: #666;
   overflow: hidden;
   cursor: pointer;
   left: 100%;
 }
 .example span {
-  font-family:'prestathin', sans-serif !important;
-   font-weight: 300;
+  font-family: 'prestamedium', sans-serif !important;
   position: absolute;
   color: #000;
   left: 0;
+  top: 0;
   /*filter: alpha(opacity=70);
     opacity: 0.7;*/
 }
 
 .example span a {
   color: #000;
-  z-index: 999;
-  font-size: 10px !important;
   left: 0;
+  z-index: 999;
+  font-size: 12px !important;
 }
 
 .example p {
@@ -80,10 +89,17 @@ body {
   z-index: 999 !important;
 }
 
+i{
+  color: #000;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 .h-container {
   z-index: 999 !important;
   position: fixed;
-  left: 2%;
+  width: 100%;
+  height: 100vh;
 }
 
 .h-container h1 {
@@ -93,11 +109,10 @@ body {
 }
 
 .h-container ul {
-  display: inline-block;
+  z-index: 998  !important;
+ list-style: none;
 }
-
 .h-container ul li {
-  padding: 10px 0px;
   list-style: none;
   z-index: 999 !important;
   color: #000;
@@ -106,15 +121,88 @@ body {
 .h-container ul li a {
   color: #000;
   text-decoration: none;
+  z-index: 999 !important;
+}
+
+.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1%;
+  margin-top: 1%;
+  cursor: pointer;
+}
+
+.right{
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 1%;
+  margin-right: 1%;
+}
+
+.n-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 1%;
+  margin-left: 1%;
+}
+
+.n-right{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 1%;
+  margin-right: 1%;
 }
 
 .m-container {
   display: none;
 }
 
+.nav {
+  display: none;
+}
+
+.loader{
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  position: absolute;
+  z-index: 999 !important;
+}
+
+.loader img {
+  margin-top: 100px;
+  width: 700px;
+  text-align: center;
+  z-index: 999 !important;
+}
+
 @media (max-width: 800px) {
+
+  .example {
+    display: none;
+  }
+
+  .loader img {
+    display: none;
+  }
+
   .h-container {
     display: none;
+  }
+
+  .m-header{
+    text-align: center;
+    z-index: 999 !important;
+    
+  }
+
+  .m-header h1  {
+    color: #000 !important;
   }
 
   .m-container {
@@ -130,9 +218,15 @@ body {
   }
 
   .m-container ul {
-    display: inline-block;
+    margin-top: 20px;
     z-index: 999 !important;
     list-style: none;
+    padding: 0px 0px !important;
+  }
+
+  .m-container ul li {
+    display: inline-block;
+    font-size: 7px;
   }
 
   .m-container span {
@@ -156,8 +250,4 @@ body {
   .header {
     display: none;
   }
-}
-
-.cp-active {
-  background-color: yellow;
 }
