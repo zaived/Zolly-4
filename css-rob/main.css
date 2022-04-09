@@ -261,7 +261,7 @@ i{
   right: 0;
   display: flex;
   flex-direction: column;
-  z-index: 999 !important;
+
   padding-bottom: 5%;
 }
 
