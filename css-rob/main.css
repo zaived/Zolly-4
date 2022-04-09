@@ -251,3 +251,27 @@ i{
     display: none;
   }
 }
+
+.list{
+  top:5%;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+z-index: 999 !important;
+}
+
+.list a{
+  display: inline-block;
+  padding: 2% 0%;
+  text-decoration: none;
+  color: #000;
+  z-index: 999 !important;
+}
+
+.list a span{
+  display: inline-block;
+}
