@@ -261,11 +261,12 @@ i{
   right: 0;
   display: flex;
   flex-direction: column;
-z-index: 999 !important;
+  z-index: 999 !important;
+  padding-bottom: 5%;
 }
 
 .list a{
-  display: inline-block;
+  display: inline-block !important;
   padding: 2% 0%;
   text-decoration: none;
   color: #000;
