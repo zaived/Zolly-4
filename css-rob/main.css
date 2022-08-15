@@ -189,7 +189,7 @@ i {
   color: #000;
 }
 
-.container .cp-active {
+.container a .thumbnail {
   width: 80%;
   pointer-events: none;
 }

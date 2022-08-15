@@ -6,7 +6,7 @@ dTab.addEventListener('click', e => {
     console.log(e);
 });
 
-const filter = () => {
-    console.log("tamer");
-}
+// const filter = () => {
+//     console.log("tamer");
+// }
 
