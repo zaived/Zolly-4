@@ -110,8 +110,8 @@ i {
   z-index: 999 !important;
   position: fixed;
   width: 100%;
-  height: 100vh;
   text-align: center;
+  background-color: #fff !important;
 }
 
 .header h1 {
@@ -187,6 +187,7 @@ i {
   align-items: center;
   text-decoration: none;
   color: #000;
+  margin-bottom: 2rem;
 }
 
 .container a .thumbnail {
