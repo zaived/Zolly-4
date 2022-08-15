@@ -1,7 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,377 +27,85 @@
     <![endif]-->
     <script src="https://kit.fontawesome.com/3844e59abb.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</head>
+  </head>
 
-
-<head>
-
-
-
-
-<style id="jsbin-css">
-
-body {
-  text-align: center;
-  font-family: "Presta W05 Extended Italic", sans-serif;
-  color: #000;
-}
-
-
-
-.container {
-  height: 100%;
-  width: 100%;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  justify-content: center;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-}
-.container .wrapper {
-  width: 100%;
-  height: 80%;
-  display: inline-block;
-  position: relative;
-  -moz-perspective: 900px;
-  -webkit-perspective: 900px;
-  perspective: 900px;
-}
-.container .wrapper section {
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  -moz-transform-origin: 50% 100% 0;
-  -webkit-transform-origin: 50% 100% 0;
-  transform-origin: 50% 100% 0;
-  -moz-transform: rotateX(83deg);
-  -ms-transform: rotateX(83deg);
-  -webkit-transform: rotateX(83deg);
-  transform: rotateX(83deg);
-  width: 100%;
-  position: absolute;
-  z-index: 3;
-  opacity: 0;
-  left: 0;
-  top: 0;
-  text-align: center;
-}
-.container .wrapper section .transform {
-  margin: 0;
-  padding-top: 3em;
-  display: inline-block;
-  position: relative;
-  width: 80%;
-  min-height: 26em;
-  background: transparent;
-}
-.container .wrapper section .transform header {
-  position: relative;
-}
-.container .wrapper input[name="pure-nav"]:checked + section {
-  -moz-transform: rotateX(0deg);
-  -ms-transform: rotateX(0deg);
-  -webkit-transform: rotateX(0deg);
-  transform: rotateX(0deg);
-  z-index: 6;
-  opacity: 1;
-}
-
-
-input[name="switch"],
-input[name="pure-nav"] {
-  display: none;
-}
-
-.navigation {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  color: #fff;
-}
-.navigation .start {
-  cursor: pointer;
-  order: -2;
-  -moz-order: -2;
-  -webkit-order: -2;
-  padding: 1.95em 1.2em;
-}
-@media (max-width: 570px) {
-  .navigation .start {
-    position: absolute;
-    z-index: 10;
-    right: 3.4em;
-    top: 0;
-  }
-}
-.navigation .start:focus .icon {
-  color: #fff;
-}
-.navigation nav {
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  justify-content: center;
-  -moz-perspective: 900px;
-  -webkit-perspective: 900px;
-  perspective: 900px;
-}
-.navigation nav .switch {
-  order: -1;
-  -moz-order: -1;
-  -webkit-order: -1;
-}
-.navigation nav .switch h1 {
-  padding: 1.95em 1.2em 1.95em 0;
-  display: inline-block;
-  text-align: left;
-}
-.navigation nav ul {
-  flex-grow: 2;
-  -webkit-flex-grow: 2;
-  text-align: right;
-  display: block;
-}
-.navigation nav ul li {
-  display: inline-block;
-}
-.navigation nav ul li label {
-  cursor: pointer;
-  color: #fff;
-  display: inline-block;
-  padding: 1.9em 1em;
-  position: relative;
-}
-.navigation nav ul li label .icon {
-  color: #f961af;
-  display: inline-block;
-  margin: -0.2em 0.6em 0 0;
-}
-.navigation nav ul li:focus {
-  outline: 0;
-  background-color: transparent;
-}
-.navigation nav ul li:focus label {
-  color: #f961af;
-}
-.navigation nav ul li:focus label .icon {
-  color: #fff;
-}
-
-html, body {
-  background: transparent;
-  height: 100%;
-  width: 100%;
-  position: relative;
-  margin: 0;
-  padding: 0;
-}
-
-
-
-.focused {
-  color: #f961af;
-  border: #f961af solid 3px;
-}
-
-
-
-
-
-
-.ease {
-  width: 0px;
-  height: 74px;
-  background-color: #f961af;
-  -webkit-transition: .3s ease;
-  -moz-transition: .3s ease;
-  -o-transition: .3s ease;
-  -ms-transition: .3s ease;
-  transition: .3s ease;
-}
-
-
-
-
-</style>
-
-<body>
-
-  <div class="loader">
-    <div>
+  <body>
+    <div class="loader">
       <div>
-        <img src="/image/LOADERRRR.png" alt="">
+        <div>
+          <img src="/image/LOADERRRR.png" alt="">
+        </div>
       </div>
     </div>
-  </div>
-    
-<script src="js-rob/main.js" type="text/javascript"></script>
-    <div class="row">
-    <div class="example" id="gall">
-      <div class="container">
-        <div class="h-container">
-          <ul>
-              <li class="left"><a href="index.html">Zolly</a></li>
-              <li class="right"><a href="/contact/">Contact</a></li>
-              <li class="n-left" ><a  href="/director/">Director</a></li>
-              <li class="n-right" ><a  href="/creativeproducer/">Creative Producer</a></li>
-            </ul>
-      
-        </div>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active"  src="image/compressed/Oliver-Tree-_Hurt_.png"><a href="/videos/96.html"><span class="cp-active">Oliver Tree: Hurt</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active"  src="image/compressed/Reebok-Winter.png"><a href="/videos/100.html"><span class="cp-active" >Reebok: Winter Your Way</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active"  src="image/compressed/Travis-Scott-and-Nav-_Biebs-In-The-Trap_.png"><a href="/videos/105.html"><span class="cp-active">Travis Scott x Nav: Beibs in the Trap</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active" src="image/compressed final/adidas-run-for-the-oceans-.png"><a href="https://snow-beach.com/video/adidas-run-for-the-oceans/#video" target="_blank"><span class="cp-active">Adidas: Run For The Oceans</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active" src="image/socks-crop.png"><a href="/videos/93.html"><span class="cp-active">Happy Socks: Hoff's Day Off</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active"  src="image/compressed final/lil-yachty-minnesota.png"><a href="/videos/106.html"><span class="cp-active"  >Lil Yachty x Quavo: Minnesota</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active"  src="image/compressed/Rosalia.png"><a href="/videos/101.html"><span class="cp-active">Rosalia x Ozuna: Yo x Ti, Tu x Mi</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active" src="image/compressed/Cove-water.png"><a href="https://snow-beach.com/video/cove-water/#video"><span class="cp-active">Cove: Water</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"src="image/about.png"><a href="/info/"><span>INFO</span></a>'
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active" src="image/lilnasx.png"><a href="/videos/112.html"><span class="cp-active">Lil Nas X Gives Birth</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active"  src="image/compressed final/pleasures-x-adidas.png"><a href="https://snow-beach.com/video/adidas-hypebeast-pleasures/#video"><span class="cp-active" >adidas Parley: Pleasures</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active" src="image/compressed/Travis-Scott-and-Juicy-J-_Neighbors_.png"><a href="/videos/104.html"><span class="cp-active">Juicy J x Travis Scott: Neighbor</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active" src="image/compressed final/Puma---Nipsey-Hussle---_My-Commute_.png"><a href="videos/108.html"><span class="cp-active" >Puma: Nipsey Hussle</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active"  src="image/compressed final/J.png"><a href="https://snow-beach.com/video/j-balvin-reggaeton/#video"><span class="cp-active" >J Balvin: Reggaeton</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active"  src="image/compressed/The-Hundreds---Summer.png"><a href="https://snow-beach.com/video/the-hundreds/#video"><span class="cp-active">The Hundreds: Summer</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active"  src="image/compressed/Someway-The-Weeknd-and-Nav.png"><a href="/videos/103.html"><span class="cp-active">The Weekend x Nav: Someway</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active" src="image/compressed/Reebok---Go-Bold-2.png"><a href="/videos/98.html"><span class="cp-active">Reebok Interval: Go Bold</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active" src="image/compressed final/Equinox---Impossible-Happens---Meet-Carrinicole.png"><a target="_blank" href="https://snow-beach.com/video/equinox-personal-training-meet-carrinicole/#video"><span class="cp-active">Equinox</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active" src="image/compressed/Juice-Wrld-Black-and-White.png"><a href="/videos/94.html"><span class="cp-active">Juice Wrld: Black and White</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active"  src="image/compressed final/Mercedes---Almost-Gets-You-Nowhere.png"><a href="/videos/107.html"><span class="cp-active">Mercedes Benz: Almost</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active" src="image/compressed final/Tokyos-Revenge.png"><a href="/videos/109.html"><span class="cp-active">Tokyo's Revenge: Goodmorning Tokyo</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active"  src="image/compressed/cold-war-kids-.png"><a href="/videos/90.html"><span class="cp-active">Cold War Kids: Whose Gonna Love Me Now</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active" src="image/compressed/essential.png"><a href="/videos/91.html"><span class="cp-active">Essential Phone by Android: The New Vanguard</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active"  src="/image/compressed final/Brewer's-Association.png"><a href="https://www.brendan-vaughan.com/new-project-3"><span class="cp-active">Brewer's Association: Freedom</span></a>
-        <img oncontextmenu="openVidPage(event); return false;" class="cp-active" src="image/compressed/oliver-tree---alien-boy-_-all-that.png"><a href="/videos/97.html"><span class="cp-active" >Oliver Tree: All That / Alien Boy</span></a>
-        <img oncontextmenu="openVidPage(event); return false;" class="cp-active" src="image/compressed/88-Rising---Head-In-The-Clouds-Visual-Album.png"><a href="#"><span class="cp-active">88 Rising Head In The Clouds</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active" src="image/compressed final/GoldLink-Crew.png"><a target="_blank" href="https://snow-beach.com/video/goldlink-crew/#video"><span class="cp-active">GoldLink, Brent Faiyaz, Shy Glizzy: Crew</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="d-active" src="image//compressed final/kajabi---what-will-you-create-.png"><a href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/e5649a15-4cd4-4bcd-ab33-bfc94fe6656d"><span class="d-active">5 Mary's Ranch</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="d-active"  src="image/compressed/gucci-pajamas-chance-guap-charlie-wilson--.png"><a href="/videos/92.html"><span class="d-active" >GuapDad4000 x Chance the Rapper x Charlie Wilson: Gucci Pajamas</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active" src="image/compressed/juicy-j-and-travis-no-english-.png"><a href="/videos/95.html"><span class="cp-active">Travis Scott x Juicy J: No English</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active" src="image/thug.png"><a href="https://snow-beach.com/video/young-thug-2-chainz-wiz-khalifa-pnb-rock/#video"><span class="cp-active">Fate of The Furious : Young Thug x 2 Chainz x Wiz Khalifa x PNB Rock: Gang Up</span></a>
-        <img oncontextmenu="openVidPage(event); return false;"class="cp-active" src="image/migo.png"><a href="https://snow-beach.com/video/quavo-travis-uzi-go-off/#video"><span class="cp-active">Fate of The Furious : Young Thug x 2 Chainz x Wiz Khalifa x PNB Rock: Gang Up</span></a>
-      <img oncontextmenu="openVidPage(event); return false;"class="d-active"  src="image/compressed/scammin-guapdad4000-mozzy.png"><a href="/videos/102.html"><span class="d-active" >Guapdad4000 x Mozzy: Scammin</span></a>
-      <img oncontextmenu="openVidPage(event); return false;"class="d-active"  src="image/IDK-2.png"><a href="/videos/111.html"><span class="d-active" >IDK: LILLY</span></a>
-      <img oncontextmenu="openVidPage(event); return false;"class="d-active" src="image/compressed/Kajabi---Amir.png"><a href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/d80288a1-58e4-4a16-8818-def1ecce2c51"><span class="d-active">Kajabi: Amir Madison</span></a>
-      <img oncontextmenu="openVidPage(event); return false;"class="d-active" src="image/compressed final/Kajabi;-francoise-weeks-.png"><a target="_blank" href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/b1559bbe-ccaf-4a50-a129-1fc19a164ce0"><span class="d-active"  >Kajabi: Francoise Weeks</span></a>
-  
-      <img oncontextmenu="openVidPage(event); return false;"class="d-active" src="image/DEAN.png"><a target="_blank" href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/8f51a06a-792c-4b3a-86c0-ce88200758c4"><span class="d-active"  >Kajabi: What Will You Create?</span></a>
-  
-      <img oncontextmenu="openVidPage(event); return false;"class="d-active" src="image/compressed/_Feen_---luh-kel-and-trippie-redd.png"><a href="/videos/88.html"><span class="d-active" >Luh Kel x Trippie Redd: Feen</span></a>
+    <header class="header">
+      <h1 onClick="filter()">ZOLLY</h1>
+      <ul>
+        <li><a  onClick="filter('d-active')" href="#">Director</a></li>
+        <li><a onClick="filter('cp-active')" href="#">Creative Producer</a></li>
+        <li><a href="/info/">Info</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </header>
 
-      <img oncontextmenu="openVidPage(event); return false;"class="d-active" src="image/compressed final/kajabi-chris-downing.png"><a target="_blank" href="https://app.frame.io/reviews/67543b9b-6b9b-4379-93db-86ea2ebea316/b699cbc3-3814-46b2-ad59-f88399e27251"><span class="d-active" >Kajabi: Chris Downing</span></a>
-    
-
-      <img oncontextmenu="openVidPage(event); return false;"class="cp-active" src="image/compressed final/Reebok-Go-Bold.png"><a href="/videos/99.html"><span class="cp-active">Reebok: Go Bold</span></a>
-
-
-
-  
- <!-- IDK - LILLY-->
-
-<!-- C. Tangana x Natti Natasha: “Viene y Va”-->
-
-  
-  
-
-</div>
-</div>
-</div>
-
-<div class="m-container">
-  <header class="m-header">
-    <h1 onClick="filter()">ZOLLY</h1>
-  </header>
-   <div class="m-header">
-     <ul>
-       <li><a  onClick="filter('d-active')" href="#">Director</a></li>
-       <li><a onClick="filter('cp-active')" href="#">Creative Producer</a></li>
-       <li><a href="/info/">Info</a></li>
-       <li><a href="/contact/">Contact</a></li>
-     </ul>
-   </div>
-   <a href="/videos/96.html">  <img class="cp-active"  src="image/compressed/Oliver-Tree-_Hurt_.png"></a><a href="/videos/96.html"><span class="cp-active">Oliver Tree: Hurt</span></a>
-   <a href="/videos/100.html"> <img class="cp-active"  src="image/compressed/Reebok-Winter.png"></a><a href="/videos/100.html"><span class="cp-active" >Reebok: Winter Your Way</span></a>
-   <a href="/videos/105.html"><img class="cp-active"  src="image/compressed/Travis-Scott-and-Nav-_Biebs-In-The-Trap_.png"></a><span class="cp-active">Travis Scott x Nav: Beibs in the Trap</span></a>
-   <a href="https://snow-beach.com/video/adidas-run-for-the-oceans/#video" target="_blank"><img class="cp-active" src="image/compressed final/adidas-run-for-the-oceans-.png"></a><a href="https://snow-beach.com/video/adidas-run-for-the-oceans/#video" target="_blank"><span class="cp-active">Adidas: Run For The Oceans</span></a>
-   <a href="/videos/93.html"> <img class="cp-active" src="image/socks-crop.png"></a><a href="/videos/93.html"><span class="cp-active">Happy Socks: Hoff's Day Off</span></a>
-   <a href="/videos/106.html"><img class="cp-active"  src="image/compressed final/lil-yachty-minnesota.png"></a><a href="/videos/106.html"><span class="cp-active"  >Lil Yachty x Quavo: Minnesota</span></a>
-   <a href="/videos/101.html"> <img class="cp-active"  src="image/compressed/Rosalia.png"></a><a href="/videos/101.html"><span class="cp-active">Rosalia x Ozuna: Yo x Ti, Tu x Mi</span></a>
-   <a href="https://snow-beach.com/video/cove-water/#video"><img class="cp-active" src="image/compressed/Cove-water.png"></a><a href="https://snow-beach.com/video/cove-water/#video"><span class="cp-active">Cove: Water</span></a>
-   <a href="/videos/112.html"> <img class="cp-active" src="image/lilnasx.png"></a><a href="/videos/112.html"><span class="cp-active">Lil Nas X Gives Birth</span></a>
-   <a href="https://snow-beach.com/video/adidas-hypebeast-pleasures/#video"> <img class="cp-active"  src="image/compressed final/pleasures-x-adidas.png"></a><a href="https://snow-beach.com/video/adidas-hypebeast-pleasures/#video"><span class="cp-active" >adidas Parley: Pleasures</span></a>
-   <a href="/videos/104.html"><img class="cp-active" src="image/compressed/Travis-Scott-and-Juicy-J-_Neighbors_.png"></a><a href="/videos/104.html"><span class="cp-active">Juicy J x Travis Scott: Neighbor</span></a>
-   <a href="videos/108.html"><img class="cp-active" src="image/compressed final/Puma---Nipsey-Hussle---_My-Commute_.png"></a><a href="videos/108.html"><span class="cp-active" >Puma: Nipsey Hussle</span></a>
-   <a href="https://snow-beach.com/video/j-balvin-reggaeton/#video"><img class="cp-active"  src="image/compressed final/J.png"></a><a href="https://snow-beach.com/video/j-balvin-reggaeton/#video"><span class="cp-active" >J Balvin: Reggaeton</span></a>
-   <a href="https://snow-beach.com/video/the-hundreds/#video"><img class="cp-active"  src="image/compressed/The-Hundreds---Summer.png"></a><a href="https://snow-beach.com/video/the-hundreds/#video"><span class="cp-active">The Hundreds: Summer</span></a>
-   <a href="/videos/103.html"><img class="cp-active"  src="image/compressed/Someway-The-Weeknd-and-Nav.png"></a><a href="/videos/103.html"><span class="cp-active">The Weekend x Nav: Someway</span></a>
-   <a href="/videos/98.html"><img class="cp-active" src="image/compressed/Reebok---Go-Bold-2.png"></a><a href="/videos/98.html"><span class="cp-active">Reebok Interval: Go Bold</span></a>
-   <a href="/videos/107.html"><img class="cp-active"  src="image/compressed final/Mercedes---Almost-Gets-You-Nowhere.png"></a><a href="/videos/107.html"><span class="cp-active">Mercedes Benz: Almost</span></a>
-   <a target="_blank" href="https://snow-beach.com/video/equinox-personal-training-meet-carrinicole/#video"><img class="cp-active" src="image/compressed final/Equinox---Impossible-Happens---Meet-Carrinicole.png"></a><a target="_blank" href="https://snow-beach.com/video/equinox-personal-training-meet-carrinicole/#video"><span class="cp-active">Equinox</span></a>
-   <a href="/videos/94.html"><img class="cp-active" src="image/compressed/Juice-Wrld-Black-and-White.png"></a><a href="/videos/94.html"><span class="cp-active">Juice Wrld: Black and White</span></a>
-   <a href="/videos/109.html"><img class="cp-active" src="image/compressed final/Tokyos-Revenge.png"></a><a href="/videos/109.html"><span class="cp-active">Tokyo's Revenge: Goodmorning Tokyo</span></a>
-   <a href="/videos/90.html"> <img class="cp-active"  src="image/compressed/cold-war-kids-.png"></a><a href="/videos/90.html"><span class="cp-active">Cold War Kids: Whose Gonna Love Me Now</span></a>
-   <a href="/videos/91.html"><img class="cp-active" src="image/compressed/essential.png"></a><a href="/videos/91.html"><span class="cp-active">Essential Phone by Android: The New Vanguard</span></a>
-   <a href="https://www.brendan-vaughan.com/new-project-3"><img class="cp-active"  src="/image/compressed final/Brewer's-Association.png"></a><a href="https://www.brendan-vaughan.com/new-project-3"><span class="cp-active">Brewer's Association</span></a>
-   <a href="/videos/97.html"><img  class="cp-active" src="image/compressed/oliver-tree---alien-boy-_-all-that.png"></a><a href="/videos/97.html"><span class="cp-active" >Oliver Tree: All That / Alien Boy</span></a>
-   <a href="#"> <img  class="cp-active" src="image/compressed/88-Rising---Head-In-The-Clouds-Visual-Album.png"></a><a href="#"><span class="cp-active">88 Rising Head In The Clouds</span></a>
-   <a target="_blank" href="https://snow-beach.com/video/goldlink-crew/#video"> <img class="cp-active" src="image/compressed final/GoldLink-Crew.png"></a><a target="_blank" href="https://snow-beach.com/video/goldlink-crew/#video"><span class="cp-active">GoldLink, Brent Faiyaz, Shy Glizzy: Crew</span></a>
-   <a href="/videos/95.html"> <img class="cp-active" src="image/compressed/juicy-j-and-travis-no-english-.png"></a><a href="/videos/95.html"><span class="cp-active">Travis Scott x Juicy J: No English</span></a>
-   <a href="https://snow-beach.com/video/young-thug-2-chainz-wiz-khalifa-pnb-rock/#video"><img class="cp-active" src="image/thug.png"></a><a href="https://snow-beach.com/video/young-thug-2-chainz-wiz-khalifa-pnb-rock/#video"><span class="cp-active">Fate of The Furious : Young Thug x 2 Chainz x Wiz Khalifa x PNB Rock: Gang Up</span></a>
-   <a href="https://snow-beach.com/video/quavo-travis-uzi-go-off/#video">  <img class="cp-active" src="image/migo.png"></a><a href="https://snow-beach.com/video/quavo-travis-uzi-go-off/#video"><span class="cp-active">Fate of The Furious : Young Thug x 2 Chainz x Wiz Khalifa x PNB Rock: Gang Up</span></a>
-   <a target="_blank" href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/b1559bbe-ccaf-4a50-a129-1fc19a164ce0"><img class="d-active" src="/image/compressed final/Kajabi;-francoise-weeks-.png"></a><a target="_blank" href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/b1559bbe-ccaf-4a50-a129-1fc19a164ce0"><span class="d-active"  >Kajabi: What Will You Create?</span></a>
-   <a href="/videos/92.html"><img class="d-active"  src="/image/compressed/gucci-pajamas-chance-guap-charlie-wilson--.png"></a><a href="/videos/92.html"><span class="d-active" >GuapDad4000 x Chance the Rapper x Charlie Wilson: Gucci Pajamas</span></a>
-   <a href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/e5649a15-4cd4-4bcd-ab33-bfc94fe6656d"><img class="d-active" src="/image//compressed final/kajabi---what-will-you-create-.png"></a><a href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/e5649a15-4cd4-4bcd-ab33-bfc94fe6656d"><span class="d-active">5 Mary's Ranch</span></a>
-   <a href="/videos/102.html"><img class="d-active"  src="/image/compressed/scammin-guapdad4000-mozzy.png"></a><a href="/videos/102.html"><span class="d-active" >Guapdad4000 x Mozzy: Scammin</span></a>
-   <a href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/d80288a1-58e4-4a16-8818-def1ecce2c51"><img class="d-active" src="/image/compressed/Kajabi---Amir.png"></a><a href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/d80288a1-58e4-4a16-8818-def1ecce2c51"><span class="d-active">Amir Madison</span></a>
-   <a href="/videos/88.html"><img  class="d-active" src="/image/luhkel.png"></a><a href="/videos/88.html"><span class="d-active" >Luh Kel x Trippie Redd: Feen</span></a>
-   <a target="_blank" href="https://app.frame.io/reviews/67543b9b-6b9b-4379-93db-86ea2ebea316/b699cbc3-3814-46b2-ad59-f88399e27251"><img class="d-active" src="/image/compressed final/kajabi-chris-downing.png"></a><a target="_blank" href="https://app.frame.io/reviews/67543b9b-6b9b-4379-93db-86ea2ebea316/b699cbc3-3814-46b2-ad59-f88399e27251"><span class="d-active" >Chris Downing Fitness</span></a>
-   <a href="/videos/111.html"><img class="d-active"  src="/image/IDK-2.png"></a><a href="/videos/111.html"><span class="d-active" >IDK: LILLY</span></a>
-   <a target="_blank" href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/8f51a06a-792c-4b3a-86c0-ce88200758c4"><img class="d-active" src="/image/DEAN.png"></a><a target="_blank" href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/8f51a06a-792c-4b3a-86c0-ce88200758c4"><span class="d-active"  >Dean Guccione</span></a>
+    <div class="container">
+      <a href="/videos/96.html">  <img class="cp-active"  src="image/compressed/Oliver-Tree-_Hurt_.png"><span class="cp-active">Oliver Tree: Hurt</span></a>
+      <a href="/videos/100.html"> <img class="cp-active"  src="image/compressed/Reebok-Winter.png"><span class="cp-active" >Reebok: Winter Your Way</span></a>
+      <a href="/videos/105.html"><img class="cp-active"  src="image/compressed/Travis-Scott-and-Nav-_Biebs-In-The-Trap_.png"><span class="cp-active">Travis Scott x Nav: Beibs in the Trap</span></a>
+      <a href="https://snow-beach.com/video/adidas-run-for-the-oceans/#video" target="_blank"><img class="cp-active" src="image/compressed final/adidas-run-for-the-oceans-.png"><span class="cp-active">Adidas: Run For The Oceans</span></a>
+      <a href="/videos/93.html"> <img class="cp-active" src="image/socks-crop.png"><span class="cp-active">Happy Socks: Hoff's Day Off</span></a>
+      <a href="/videos/106.html"><img class="cp-active"  src="image/compressed final/lil-yachty-minnesota.png"><span class="cp-active"  >Lil Yachty x Quavo: Minnesota</span></a>
+      <a href="/videos/101.html"> <img class="cp-active"  src="image/compressed/Rosalia.png"><span class="cp-active">Rosalia x Ozuna: Yo x Ti, Tu x Mi</span></a>
+      <a href="https://snow-beach.com/video/cove-water/#video"><img class="cp-active" src="image/compressed/Cove-water.png"><span class="cp-active">Cove: Water</span></a>
+      <a href="/videos/112.html"> <img class="cp-active" src="image/lilnasx.png"><span class="cp-active">Lil Nas X Gives Birth</span></a>
+      <a href="https://snow-beach.com/video/adidas-hypebeast-pleasures/#video"> <img class="cp-active"  src="image/compressed final/pleasures-x-adidas.png"><span class="cp-active" >adidas Parley: Pleasures</span></a>
+      <a href="/videos/104.html"><img class="cp-active" src="image/compressed/Travis-Scott-and-Juicy-J-_Neighbors_.png"><span class="cp-active">Juicy J x Travis Scott: Neighbor</span></a>
+      <a href="videos/108.html"><img class="cp-active" src="image/compressed final/Puma---Nipsey-Hussle---_My-Commute_.png"><span class="cp-active" >Puma: Nipsey Hussle</span></a>
+      <a href="https://snow-beach.com/video/j-balvin-reggaeton/#video"><img class="cp-active"  src="image/compressed final/J.png"><span class="cp-active" >J Balvin: Reggaeton</span></a>
+      <a href="https://snow-beach.com/video/the-hundreds/#video"><img class="cp-active"  src="image/compressed/The-Hundreds---Summer.png"><span class="cp-active">The Hundreds: Summer</span></a>
+      <a href="/videos/103.html"><img class="cp-active"  src="image/compressed/Someway-The-Weeknd-and-Nav.png"><span class="cp-active">The Weekend x Nav: Someway</span></a>
+      <a href="/videos/98.html"><img class="cp-active" src="image/compressed/Reebok---Go-Bold-2.png"><span class="cp-active">Reebok Interval: Go Bold</span></a>
+      <a href="/videos/107.html"><img class="cp-active"  src="image/compressed final/Mercedes---Almost-Gets-You-Nowhere.png"><span class="cp-active">Mercedes Benz: Almost</span></a>
+      <a target="_blank" href="https://snow-beach.com/video/equinox-personal-training-meet-carrinicole/#video"><img class="cp-active" src="image/compressed final/Equinox---Impossible-Happens---Meet-Carrinicole.png"><span class="cp-active">Equinox</span></a>
+      <a href="/videos/94.html"><img class="cp-active" src="image/compressed/Juice-Wrld-Black-and-White.png"><span class="cp-active">Juice Wrld: Black and White</span></a>
+      <a href="/videos/109.html"><img class="cp-active" src="image/compressed final/Tokyos-Revenge.png"><span class="cp-active">Tokyo's Revenge: Goodmorning Tokyo</span></a>
+      <a href="/videos/90.html"> <img class="cp-active"  src="image/compressed/cold-war-kids-.png"><span class="cp-active">Cold War Kids: Whose Gonna Love Me Now</span></a>
+      <a href="/videos/91.html"><img class="cp-active" src="image/compressed/essential.png"><span class="cp-active">Essential Phone by Android: The New Vanguard</span></a>
+      <a href="https://www.brendan-vaughan.com/new-project-3"><img class="cp-active"  src="/image/compressed final/Brewer's-Association.png"><span class="cp-active">Brewer's Association</span></a>
+      <a href="/videos/97.html"><img  class="cp-active" src="image/compressed/oliver-tree---alien-boy-_-all-that.png"><span class="cp-active" >Oliver Tree: All That / Alien Boy</span></a>
+      <a href="#"> <img  class="cp-active" src="image/compressed/88-Rising---Head-In-The-Clouds-Visual-Album.png"><span class="cp-active">88 Rising Head In The Clouds</span></a>
+      <a target="_blank" href="https://snow-beach.com/video/goldlink-crew/#video"> <img class="cp-active" src="image/compressed final/GoldLink-Crew.png"><span class="cp-active">GoldLink, Brent Faiyaz, Shy Glizzy: Crew</span></a>
+      <a href="/videos/95.html"> <img class="cp-active" src="image/compressed/juicy-j-and-travis-no-english-.png"><span class="cp-active">Travis Scott x Juicy J: No English</span></a>
+      <a href="https://snow-beach.com/video/young-thug-2-chainz-wiz-khalifa-pnb-rock/#video"><img class="cp-active" src="image/thug.png"><span class="cp-active">Fate of The Furious : Young Thug x 2 Chainz x Wiz Khalifa x PNB Rock: Gang Up</span></a>
+      <a href="https://snow-beach.com/video/quavo-travis-uzi-go-off/#video">  <img class="cp-active" src="image/migo.png"><span class="cp-active">Fate of The Furious : Young Thug x 2 Chainz x Wiz Khalifa x PNB Rock: Gang Up</span></a>
+      <a target="_blank" href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/b1559bbe-ccaf-4a50-a129-1fc19a164ce0"><img class="d-active" src="/image/compressed final/Kajabi;-francoise-weeks-.png"><span class="d-active"  >Kajabi: What Will You Create?</span></a>
+      <a href="/videos/92.html"><img class="d-active"  src="/image/compressed/gucci-pajamas-chance-guap-charlie-wilson--.png"><span class="d-active" >GuapDad4000 x Chance the Rapper x Charlie Wilson: Gucci Pajamas</span></a>
+      <a href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/e5649a15-4cd4-4bcd-ab33-bfc94fe6656d"><img class="d-active" src="/image//compressed final/kajabi---what-will-you-create-.png"><span class="d-active">5 Mary's Ranch</span></a>
+      <a href="/videos/102.html"><img class="d-active"  src="/image/compressed/scammin-guapdad4000-mozzy.png"><span class="d-active" >Guapdad4000 x Mozzy: Scammin</span></a>
+      <a href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/d80288a1-58e4-4a16-8818-def1ecce2c51"><img class="d-active" src="/image/compressed/Kajabi---Amir.png"><span class="d-active">Amir Madison</span></a>
+      <a href="/videos/88.html"><img  class="d-active" src="/image/luhkel.png"><span class="d-active" >Luh Kel x Trippie Redd: Feen</span></a>
+      <a target="_blank" href="https://app.frame.io/reviews/67543b9b-6b9b-4379-93db-86ea2ebea316/b699cbc3-3814-46b2-ad59-f88399e27251"><img class="d-active" src="/image/compressed final/kajabi-chris-downing.png"><span class="d-active" >Chris Downing Fitness</span></a>
+      <a href="/videos/111.html"><img class="d-active"  src="/image/IDK-2.png"><span class="d-active" >IDK: LILLY</span></a>
+      <a target="_blank" href="https://app.frame.io/reviews/7a857f5c-874a-4ffa-8823-29204d446871/8f51a06a-792c-4b3a-86c0-ce88200758c4"><img class="d-active" src="/image/DEAN.png"><span class="d-active"  >Dean Guccione</span></a>
+    </div>
     <div class="f-container">
       <a href="https://www.instagram.com/zollywood_usa/">INSTAGRAM</a>
     </div>
-</div>
+    
+    <script src="/js-rob/filter.js"></script>
+    <script src="js-rob/jquery.js"></script>
+    <script>
 
-<script src="/js-rob/filter.js"></script>
-<script src="js-rob/jquery.js"></script>
-<script>
-
-  function openVidPage(event){
-    event.preventDefault();
-    // window.open(event.target.href, '_blank');
-    event.target.nextElementSibling.click();
-  }
-  
-  $(window).on('load',function(){
-    $(".loader").fadeOut(6000);
-  });
-</script>
-
+      function openVidPage(event){
+        event.preventDefault();
+        // window.open(event.target.href, '_blank');
+        event.target.nextElementSibling.click();
+      }
+      
+      $(window).on('load',function(){
+        $(".loader").fadeOut(6000);
+      });
+    </script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js-rob/bootstrap.min.js"></script>
-
-    </body>
+  </body>
 </html>
