@@ -190,6 +190,10 @@ i {
   margin-bottom: 2rem;
 }
 
+.container a span {
+  margin-top: 0.5rem;
+}
+
 .container a .thumbnail {
   width: 80%;
   pointer-events: none;
